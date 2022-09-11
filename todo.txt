@@ -1,0 +1,4 @@
+TODO:
+
+- Finish dpkg auto-script
+can use: https://linuxize.com/post/how-to-compare-strings-in-bash/
