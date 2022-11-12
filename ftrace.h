@@ -84,7 +84,7 @@ static void ftrace_init(int tracer_type)
 static void ftrace_exit(void)
 {
     ftrace_unset_tracing_on();
-    ftrace_system("cat " FTRACE_DIR "/trace");
+    ftrace_system("cat " FTRACE_DIR "/trace > ftrace.log");
 }
 
 #endif /* __FTRACE_H__ */
