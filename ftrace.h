@@ -73,6 +73,11 @@ static void ftrace_set_tracer(int type)
     }
 }
 
+static void ftrace_get_log(void)
+{
+    ftrace_system("cat " FTRACE_DIR "/trace > ftrace.log");
+}
+
 static void ftrace_init(int tracer_type)
 {
     ftrace_set_tracer(tracer_type);
@@ -84,7 +89,7 @@ static void ftrace_init(int tracer_type)
 static void ftrace_exit(void)
 {
     ftrace_unset_tracing_on();
-    ftrace_system("cat " FTRACE_DIR "/trace > ftrace.log");
+    ftrace_get_log();
 }
 
 #endif /* __FTRACE_H__ */
