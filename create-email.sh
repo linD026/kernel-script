@@ -16,7 +16,7 @@ function for_each_line() {
 	args=("$@")
 	from="${args[2]}"
 	for line in $from; do
-		echo "$1\"$line\" \\" >> $2
+		echo "$1\"${line//\"/\\\"}\" \\" >> $2
 	done
 }
 
