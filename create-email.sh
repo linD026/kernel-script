@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# To ge the maintainer list, do:
+#
+#   ./scripts/get_maintainer.pl --no-rolestats (cat send-patch.txt)
+#
 # TO: per-line: name <email>
 # CC: ditto
 # PATCH: per-line: patch file name
